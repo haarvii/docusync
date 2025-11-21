@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DocuSync AI
+### The AI Documentation Engineer that runs privately on your infrastructure  
+**Stop writing docs. Start shipping code.**
 
-## Getting Started
+---
 
-First, run the development server:
+## 🚀 The Problem
+
+Documentation is always the last priority:
+
+- **Documentation Rot:** Docs become outdated the moment code ships.  
+- **Knowledge Silos:** Critical knowledge is trapped in senior engineers’ heads.  
+- **Privacy Risks:** You cannot paste proprietary code into public AI tools.
+
+---
+
+## 🛠 The Solution: Hybrid Intelligence
+
+**DocuSync AI automatically documents your codebase.**
+
+When a Pull Request is merged, DocuSync AI:
+
+1. Monitors the Git diff  
+2. Generates a human-readable change summary  
+3. Updates your internal wiki (Notion/Confluence)
+
+### 🔐 Smart Router (Speed + Privacy)
+
+Our inference layer intelligently routes code to the right engine:
+
+| Lane          | Engine                     | Purpose                                      |
+|---------------|-----------------------------|----------------------------------------------|
+| **Fast Lane** | Groq API (Llama 3 8B)       | Generic diffs, sub-second inference          |
+| **Private Lane** | Local Ollama Instance       | Sensitive logic processed inside your VPC    |
+
+Nothing sensitive ever leaves your infrastructure.
+
+---
+
+## 🏗 Architecture (The $0 Stack)
+
+A fully working production architecture built entirely using **free-tier components**.
+
+| Component      | Technology            | Purpose                        | Cost            |
+|----------------|------------------------|--------------------------------|-----------------|
+| **Frontend**   | Next.js + Tailwind     | Landing Page & Dashboard       | Free (Vercel)   |
+| **Compute**    | Oracle Ampere A1       | 4 vCPUs + 24GB RAM server      | Free            |
+| **AI Engine**  | Ollama (Llama 3)       | Local inference                | Free            |
+| **Fast Inference** | Groq API            | Cloud inference (fast path)    | Free Tier       |
+| **Queue**      | BullMQ + Redis         | Async job processing           | Free (self-hosted) |
+| **Database**   | Supabase (pgvector)    | Data + embeddings              | Free Tier       |
+
+---
+
+## 💻 Local Development
+
+This repository contains the **Frontend / Landing Page**.
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Setup
 
 ```bash
+# Clone the repo
+git clone https://github.com/yourusername/docusync-landing.git
+cd docusync-landing
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

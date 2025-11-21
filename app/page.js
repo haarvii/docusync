@@ -70,7 +70,7 @@ function Header({ scrolled }) {
           {/* Nav Actions */}
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/YOUR_REPO_HERE"
+              href="https://github.com/haarvii/docusync"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
@@ -133,7 +133,7 @@ function HeroSection() {
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
-            href="https://github.com/YOUR_REPO_HERE"
+            href="https://github.com/haarvii/docusync"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors"
@@ -411,8 +411,8 @@ function Footer() {
           </div>
           
           <div className="flex gap-8 text-sm font-medium text-slate-400">
-            <a href="#" className="hover:text-red-500 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-red-500 transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-red-500 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-red-500 transition-colors">Terms</a>
             <a href="#" className="hover:text-red-500 transition-colors">GitHub</a>
             <a href="#" className="hover:text-red-500 transition-colors">Twitter</a>
           </div>
